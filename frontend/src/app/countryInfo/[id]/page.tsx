@@ -10,14 +10,15 @@ interface Params {
 export default async function CountryInfoContainer({ params }: Params) {
   const { id } = params;
   let countryInfo;
-  let errorMessage;
+  let errorMessage = ""; 
   try {
     const response = await axios.get(
       `${process.env.NEXT_PUBLIC_COUNTRY_INFO_URL}${id}`
     );
     countryInfo = response.data.info;
-  } catch (error: any) {
-    errorMessage = error.response?.data.error || "Error fetching data";
+  } catch (error: unknown) { 
+      errorMessage = error.response.data.error || "Error fetching data";
+   
   }
 
   return <CountryInfo countryInfo={countryInfo} errorMessage={errorMessage} />;
