@@ -1,7 +1,7 @@
 
-import axios from "axios";
-import CountriesList from "./components/CountriesList";
-// import styles from "./page.module.css";
+import axios from 'axios';
+import CountriesList from './components/CountriesList';
+import styles from './page.module.css';
 
 interface Country {
   countryCode: string;
@@ -9,9 +9,20 @@ interface Country {
 }
 
 export default async function Home() {
-  const { data } = await axios.get<{ countries: Country[] }>(
-    process.env.NEXT_PUBLIC_COUNTRIES_URL as string
-  );
+  try {
+    const { data } = await axios.get<{ countries: Country[] }>(
+      process.env.NEXT_PUBLIC_COUNTRIES_URL as string
+    );
 
-  return <CountriesList countries={data.countries} />;
+    return (
+      <div className={styles.section}>
+        <div className={styles.container}>
+          <CountriesList countries={data.countries} />
+        </div>
+      </div>
+    )
+  } catch (error) {
+    console.error('Error fetching countries:', error);
+    return <CountriesList countries={[]} />;
+  }
 }

@@ -33,7 +33,7 @@ const CountryPopulation: React.FC<CountryPopulationProps> = ({
       >
         <CartesianGrid strokeDasharray="3 3" />
         <XAxis dataKey="year" />
-        <YAxis dataKey="value" />
+        <YAxis />
         <Tooltip />
         <Area
           type="monotone"

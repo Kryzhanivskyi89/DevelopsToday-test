@@ -2,6 +2,7 @@
 import Link from "next/link";
 import Pagination from "./Pagination";
 import { useState } from "react";
+import styles from './countryList.module.css';
 
 interface Country {
   countryCode: string;
@@ -15,14 +16,13 @@ interface CountriesListProps {
 const CountriesList: React.FC<CountriesListProps> = ({ countries }) => {
   const [page, setPage] = useState<number>(1);
   const maxPage = Math.ceil(countries.length / 10);
-
   return (
     <>
-      <h1>Country list</h1>
-      <ul>
+      <h1 className={styles.title}>Country list</h1>
+      <ul className={styles.list}>
         {countries.slice(page * 10 - 10, page * 10).map((country) => (
-          <li key={country.countryCode}>
-            <Link href={`/country/info/${country.countryCode}`}>
+          <li key={country.countryCode} className={styles.listItem}>
+            <Link className={styles.link} href={`/country/info/${country.countryCode}`}>
               {country.name}
             </Link>
           </li>

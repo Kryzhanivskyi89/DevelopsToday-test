@@ -1,6 +1,11 @@
+"use client";
 import Link from "next/link";
-import CountryPopulation from "./CountryPopulation";
+import dynamic from 'next/dynamic';
 import Image from "next/image";
+
+const CountryPopulation = dynamic(() => import('./CountryPopulation'), {
+  ssr: false,
+});
 
 interface BorderCountry {
   countryCode: string;
@@ -36,27 +41,35 @@ const CountryInfo: React.FC<CountryInfoProps> = ({
         <>
           <div>
             <h1>{countryInfo.name}</h1>
-            <Image
-              src={countryInfo.flagUrl}
-              priority
-              width="150"
-              height="100"
-              alt="Country flag image"
-            />
+            {countryInfo.flagUrl ? (
+              <Image
+                src={countryInfo.flagUrl}
+                priority
+                width="150"
+                height="100"
+                alt={`${countryInfo.name} flag`}
+              />
+            ) : (
+              <p>Flag not available</p>
+            )}
           </div>
 
-          <div>
-            <h2>Border countries:</h2>
-            <ul>
-              {countryInfo.borders.map((borderCountry) => (
-                <li key={borderCountry.countryCode}>
-                  <Link href={`/country/info/${borderCountry.countryCode}`}>
-                    {borderCountry.commonName}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
+          {countryInfo.borders.length > 0 ? (
+            <nav>
+              <h2>Border countries:</h2>
+              <ul>
+                {countryInfo.borders.map((borderCountry) => (
+                  <li key={borderCountry.countryCode}>
+                    <Link href={`/country/info/${borderCountry.countryCode}`}>
+                      {borderCountry.commonName}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </nav>
+          ) : (
+            <p>No border countries available</p>
+          )}
 
           <div>
             <h3>Population</h3>

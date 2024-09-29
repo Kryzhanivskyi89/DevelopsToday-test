@@ -1,0 +1,30 @@
+.title {
+    font-size: 1.875rem;
+    font-weight: bold;
+    text-align: center;
+    color: #4a5568;
+    margin-bottom: 1.5rem;  
+}
+
+.list {
+    margin-top: 1rem;   
+}
+
+.listItem {
+    background: linear-gradient(to right, #ec4899, #f59e0b);
+    /* border-radius: 0.5rem; */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    color: white;
+    text-align: center;
+    font-weight: 600;
+}
+
+.link {
+    display: inline-block;
+    width: 100%;
+    padding: 1rem;
+    transition: transform 0.3s ease-in-out;
+}
+.link:hover {
+    transform: scale(1.15);
+}

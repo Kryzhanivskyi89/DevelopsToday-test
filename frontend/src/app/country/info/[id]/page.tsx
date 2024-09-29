@@ -22,4 +22,5 @@ export default async function CountryInfoContainer({ params }: Params) {
   }
 
   return <CountryInfo countryInfo={countryInfo} errorMessage={errorMessage} />;
+  
 }
