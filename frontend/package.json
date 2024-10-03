@@ -2,6 +2,7 @@
   "name": "frontend",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://kryzhanivskyi89.github.io/country-next/",
   "scripts": {
     "dev": "next dev",
     "build": "next build",

@@ -1,0 +1,70 @@
+.countryInfo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    gap: 1.5rem;
+}
+
+.countryName {
+    margin-bottom: 1rem;
+    color: #1f2937;
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+    font-weight: 700;
+    text-align: center;
+}
+
+.countryImage {
+    max-width: 150px;
+    max-height: 100px;
+    height: auto;
+}
+
+.countryBorder {
+    margin-left: 2rem;
+}
+
+.countryBorderTitle {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #4a5568;
+    margin-bottom: 1rem;
+}
+
+.countryBorderList {
+    list-style-type: disc;
+    list-style-position: inside; 
+    margin-bottom: 1%;
+    list-style: none;
+}
+
+.countryBorderItem {
+    margin-bottom: 0.5rem;
+    color: #4B5563;
+}
+
+.countryBorderLink {
+    color: #2563EB;
+}
+
+.population {
+    margin-bottom: 6rem;
+}
+
+.populationTitle {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #374151;
+    margin-bottom: 0.5rem;
+    margin-left: 2rem;
+}
+
+.populationChart {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 2rem;
+}

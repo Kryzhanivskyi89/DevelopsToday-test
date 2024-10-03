@@ -21,13 +21,13 @@ const CountryPopulation: React.FC<CountryPopulationProps> = ({
   populationData,
 }) => {
   return (
-    <ResponsiveContainer width="100%" aspect={2}>
+    <ResponsiveContainer width="100%" aspect={3}>
       <AreaChart
         data={populationData}
         margin={{
           top: 10,
-          right: 0,
-          left: 0,
+          right: 100,
+          left: 20,
           bottom: 0,
         }}
       >

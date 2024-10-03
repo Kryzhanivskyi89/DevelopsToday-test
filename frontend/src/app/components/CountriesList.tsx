@@ -17,7 +17,7 @@ const CountriesList: React.FC<CountriesListProps> = ({ countries }) => {
   const [page, setPage] = useState<number>(1);
   const maxPage = Math.ceil(countries.length / 10);
   return (
-    <>
+    <main className={styles.container}>
       <h1 className={styles.title}>Country list</h1>
       <ul className={styles.list}>
         {countries.slice(page * 10 - 10, page * 10).map((country) => (
@@ -29,7 +29,7 @@ const CountriesList: React.FC<CountriesListProps> = ({ countries }) => {
         ))}
       </ul>
       <Pagination page={page} setPage={setPage} maxPage={maxPage} />
-    </>
+    </main>
   );
 };
 
