@@ -4,7 +4,7 @@ const nextConfig = {
     // assetPrefix: '/country-next/',
     output: 'export',
   basePath: '/country-next',
-  assetPrefix: '/country-next/',
+//   assetPrefix: '/country-next/',
 };
 
 export default nextConfig;
