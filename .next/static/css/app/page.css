@@ -1,0 +1,61 @@
+/*!*************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[3]!./src/app/components/countryList.module.css ***!
+  \*************************************************************************************************************************************************************************************************************************************************************************************/
+
+.countryList_title__UbFv7 {
+    font-size: 1.875rem;
+    font-weight: bold;
+    text-align: left;
+    color: #1abc9c;
+    margin-bottom: 1.5rem;  
+}
+
+.countryList_list__KryrD {
+    list-style: none;
+    padding: 0;
+    /* margin: 20px auto; */
+    max-width: 200px;
+    overflow: hidden;
+}
+
+.countryList_listItem__ASIyL {
+    padding: 15px;
+    margin-bottom: 10px;
+    text-align: center;
+    border-radius: 8px;
+    border: 1px solid #e0e0e0;
+    transition: background-color 0.3s ease;
+    background-color: rgba(0, 0, 0, 0.5);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.countryList_listItem__ASIyL:hover {
+    background-color: rgba(249, 249, 249, 0.2);
+}
+
+.countryList_listItem__ASIyL:last-child {
+    border-bottom: none;
+    margin-bottom: 0px;
+}
+
+.countryList_link__gN4HI {
+    text-decoration: none ;
+    color: #1abc9c;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+
+@media (max-width: 768px) {
+    .countryList_list__KryrD {
+        margin: 10px auto;
+    }
+
+    .countryList_listItem__ASIyL {
+        padding: 12px;
+    }
+
+    .countryList_link__gN4HI {
+        font-size: 16px;
+    }
+}
