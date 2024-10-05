@@ -9,7 +9,7 @@
 
 .countryName {
     margin-bottom: 1rem;
-    color: #1f2937;
+    color: #1abc9c;
     font-size: 2.25rem;
     line-height: 2.5rem;
     font-weight: 700;
@@ -29,7 +29,7 @@
 .countryBorderTitle {
     font-size: 1.5rem;
     font-weight: 600;
-    color: #4a5568;
+    color: #255, 255, 255;
     margin-bottom: 1rem;
 }
 
@@ -38,15 +38,22 @@
     list-style-position: inside; 
     margin-bottom: 1%;
     list-style: none;
+    max-width: 200px;
 }
 
 .countryBorderItem {
-    margin-bottom: 0.5rem;
+    padding: 15px;
+    margin-bottom: 10px;
     color: #4B5563;
+    border-radius: 8px;
+    border: 1px solid #e0e0e0;
+    transition: background-color 0.3s ease;
+    background-color: rgba(0, 0, 0, 0.5);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .countryBorderLink {
-    color: #2563EB;
+    color: #1abc9c;
 }
 
 .population {
@@ -56,7 +63,7 @@
 .populationTitle {
     font-size: 1.25rem;
     font-weight: 600;
-    color: #374151;
+    color: #255, 255, 255;
     margin-bottom: 0.5rem;
     margin-left: 2rem;
 }

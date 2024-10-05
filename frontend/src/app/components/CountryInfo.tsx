@@ -35,6 +35,7 @@ const CountryInfo: React.FC<CountryInfoProps> = ({
 }) => {
   return (
     <>
+      <Link href="/">Go back</Link>
       {errorMessage ? (
         <div >
           <span>Country info was not found</span>
@@ -84,7 +85,7 @@ const CountryInfo: React.FC<CountryInfoProps> = ({
           </div>
         </>
       )}
-      <Link href="/">Go back</Link>
+      
     </>
   );
 };

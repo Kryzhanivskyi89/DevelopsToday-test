@@ -1,7 +1,6 @@
 
 import axios from 'axios';
 import CountriesList from './components/CountriesList';
-import styles from './page.module.css';
 
 interface Country {
   countryCode: string;
@@ -15,11 +14,11 @@ export default async function Home() {
     );
 
     return (
-      <div className={styles.section}>
-        <div className={styles.container}>
+      <main className='section'>
+        <div className='container'>
           <CountriesList countries={data.countries} />
         </div>
-      </div>
+      </main>
     )
   } catch (error) {
     console.error('Error fetching countries:', error);
