@@ -1,1 +1,1 @@
-self.__REACT_LOADABLE_MANIFEST="{}"
+self.__REACT_LOADABLE_MANIFEST="{\"app/components/CountryInfo.tsx -> ./CountryPopulation\":{\"id\":\"app/components/CountryInfo.tsx -> ./CountryPopulation\",\"files\":[\"static/chunks/_app-pages-browser_src_app_components_CountryPopulation_tsx.js\"]}}"
