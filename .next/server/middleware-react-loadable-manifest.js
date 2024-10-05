@@ -1,1 +1,1 @@
-self.__REACT_LOADABLE_MANIFEST='{"app/components/CountryInfo.tsx -> ./CountryPopulation":{"id":87079,"files":["static/chunks/542.60f057c46615b0e0.js","static/chunks/79.73b4474fc87b20e4.js"]}}';
+self.__REACT_LOADABLE_MANIFEST="{\"app/components/CountryInfo.tsx -> ./CountryPopulation\":{\"id\":\"app/components/CountryInfo.tsx -> ./CountryPopulation\",\"files\":[\"static/chunks/_app-pages-browser_src_app_components_CountryPopulation_tsx.js\"]}}"
