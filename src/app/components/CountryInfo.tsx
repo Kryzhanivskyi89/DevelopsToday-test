@@ -67,7 +67,7 @@ const CountryInfo: React.FC<CountryInfoProps> = ({
                 {countryInfo.borders.map((borderCountry) => (
                   <li key={borderCountry.countryCode} className={styles.countryBorderItem}>
                     <Link
-                      href={`/country/info/${borderCountry.countryCode}`}
+                      href={`/country-next/country/info/${borderCountry.countryCode}`}
                       className={styles.countryBorderLink}>
                       {borderCountry.commonName}
                     </Link>
