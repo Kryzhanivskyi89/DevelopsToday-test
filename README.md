@@ -1,36 +1,68 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+**Project Overview**
 
-## Getting Started
+The Country Info Application is a full-stack project that allows users to browse and retrieve detailed information about different countries, such as population statistics, border countries, and flag images. The goal was to not only deliver a functional app but also to deepen my understanding of cutting-edge technologies in modern web development.
 
-First, run the development server:
+**Getting Started**
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+1. **Clone the Repository:**
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+   ```
+   git clone https://github.com/Kryzhanivskyi89/country-next
+   ```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+2. **Install Dependencies:**
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+   ```
+   cd frontend
+   npm install
+   ```
 
-## Learn More
+3. **Run the project in development environment**
 
-To learn more about Next.js, take a look at the following resources:
+   ```
+   cd frontend
+   npm run dev
+   ```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+The frontend will be running in [http://localhost:3000](http://localhost:3000/)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+**Frontend endpoints**
 
-## Deploy on Vercel
+Obtain available countries:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- **Endpoint**: *countries/getAvailableCountries*
+- **Method**: GET
+- **Description**: Get a list of available countries.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Obtain a single country information:
+
+- **Endpoint**: countries/getCountryInfo/:countryId
+- **Method**: GET
+- **Description**: Recovery population, flag and border countries of a single country.
+
+**API's documentation**
+
+- **Country List API**: [Nager.Date API Documentation](https://date.nager.at/swagger/index.html)
+- **Country Info API**: [Postman Country Info API Documentation](https://documenter.getpostman.com/view/1134062/T1LJjU52)
+
+Key Achievements:
+
+1. **Mastered Next.js:**
+
+• Enhanced my understanding of Next.js’s SSR, SSG, and API routes, leading to faster and SEO-friendly pages.
+
+2. **TypeScript Proficiency:**
+
+• Developed type-safe React components with TypeScript, improving both the scalability and reliability of my codebase.
+
+3. **Improved Performance:**
+
+• Utilized server-side rendering to optimize performance, reducing initial load times and improving user experience.
+
+4. **API Integration:**
+
+• Worked with multiple third-party APIs to fetch real-time data, enhancing the app’s functionality and learning how to manage API responses effectively.
+
+5. **Backend Development and Deployment:**
+
+• Designed and developed a separate backend, ensuring efficient data management and integration with the frontend. Successfully deployed the backend on Render, showcasing my full-stack development capabilities.
