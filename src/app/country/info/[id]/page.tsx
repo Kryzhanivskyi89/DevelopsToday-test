@@ -28,11 +28,9 @@
 import CountryInfo from "@/app/components/CountryInfo";
 import axios from "axios";
 
-// Визначення інтерфейсу для країни
 interface Country {
-  countryCode: string; // Код країни (можливо, ISO-код)
-  name: string;        // Назва країни
-  // Додайте інші властивості, якщо потрібно
+  countryCode: string; 
+  name: string;      
 }
 
 interface Params {
@@ -41,18 +39,17 @@ interface Params {
   };
 }
 
-// Функція для генерації статичних параметрів
 export async function generateStaticParams() {
-  let countries: Country[] = []; // Додаємо тип для масиву країн
+  let countries: Country[] = []; 
   try {
     const response = await axios.get(`${process.env.NEXT_PUBLIC_COUNTRIES_URL}`);
-    countries = response.data.countries || []; // Припустимо, дані повертаються у форматі { countries: [...] }
+    countries = response.data.countries || [];
   } catch (error) {
     console.error("Error fetching countries:", error);
   }
 
-  return countries.map((country: Country) => ({ // Вказуємо тип для параметра country
-    id: country.countryCode, // або використовуйте country.id в залежності від формату
+  return countries.map((country: Country) => ({ 
+    id: country.countryCode, 
   }));
 }
 
